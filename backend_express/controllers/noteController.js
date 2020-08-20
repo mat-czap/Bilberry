@@ -1,4 +1,4 @@
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require("uuid");
 const db = require("../db/factoryRepository");
 
 const note = {
@@ -11,8 +11,7 @@ const note = {
 		}
 	},
 	addNote: async (req, res) => {
-		const newId = uuidv4()
-		console.log(req.body)
+		const newId = uuidv4();
 		const content = {
 			id: newId,
 			name: req.body.name,
@@ -22,8 +21,7 @@ const note = {
 		};
 		try {
 			const newNote = await db.addNote(content);
-			console.log(content)
-			newNote ? res.send({content}) : null;
+			newNote ? res.send({ content }) : null;
 		} catch (err) {
 			res.sendStatus(500);
 		}

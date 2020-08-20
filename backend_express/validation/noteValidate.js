@@ -2,10 +2,10 @@ const Joi = require("@hapi/joi");
 
 const newItemValidation = (passingValues) => {
 	const schema = Joi.object({
-		name: Joi.string().required(),
-		language: Joi.string().required(),
-		description: Joi.string().required(),
-		initRelease: Joi.number().integer().required()
+		name: Joi.required(),
+		language: Joi.string(),
+		description: Joi.string(),
+		initRelease: Joi.number().integer()
 	});
 
     const { error } = schema.validate(passingValues)

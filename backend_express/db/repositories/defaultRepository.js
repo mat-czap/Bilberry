@@ -1,11 +1,11 @@
-const db = require('./demo')
+const db = require("./demo");
 
-module.exports = class defaultRepository{
-    constructor() {
+module.exports = class defaultRepository {
+	constructor() {
 		this.model = new db();
-    }
-    
-    async getAllNotes() {
+	}
+
+	async getAllNotes() {
 		return await this.model.getData();
 	}
 
@@ -16,4 +16,4 @@ module.exports = class defaultRepository{
 	async deleteNote(id) {
 		return await this.model.deleteData(id);
 	}
-}
+};

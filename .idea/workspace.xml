@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3d7535b1-8a11-49f1-94d5-1215aaab864c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_express/controllers/noteController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend_express/controllers/noteController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend_express/validation/noteValidate.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend_express/validation/noteValidate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend_react/frontend_react/src/components/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_react/frontend_react/src/components/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend_react/frontend_react/src/components/MainTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_react/frontend_react/src/components/MainTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend_react/frontend_react/src/components/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_react/frontend_react/src/components/Table.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1gMhnhx7VgyNqTWKg1xz3iOegQL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d7535b1-8a11-49f1-94d5-1215aaab864c" name="Default Changelist" comment="" />
+      <created>1597930537842</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597930537842</updated>
+    </task>
+    <servers />
+  </component>
+</project>

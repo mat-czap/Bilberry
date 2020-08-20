@@ -2,7 +2,7 @@ require("dotenv/config");
 const defaultRepository = require("./repositories/defaultRepository");
 
 const TYPES = {
-	DEFAULT: "default"
+	DEFAULT: "default",
 };
 
 const USED_DB = process.env.USER_DB_NAME || TYPES.DEFAULT;

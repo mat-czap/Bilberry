@@ -1,12 +1,10 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import { Button, LinearProgress } from "@material-ui/core";
-import { TextField, fieldToTextField } from "formik-material-ui";
+import { TextField } from "formik-material-ui";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
-
 import { connect } from "react-redux";
 import { addNote } from "../actions";
-
 import axios from "axios";
 
 const useStyles = makeStyles({
@@ -16,13 +14,13 @@ const useStyles = makeStyles({
 });
 
 const InputForm = ({ addNote }) => {
+	const classes = useStyles();
 	const StyledField = withStyles({
 		root: {
-			width: "50%",
+			width: "40%",
 			margin: "0 20px",
 		},
 	})(Field);
-	const classes = useStyles();
 
 	return (
 		<Formik
@@ -32,17 +30,21 @@ const InputForm = ({ addNote }) => {
 				description: "",
 				initRelease: "",
 			}}
-			//   validate={values => {
-			//     const errors = {};
-			//     if (!values.email) {
-			//       errors.email = 'Required';
-			//     } else if (
-			//       !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-			//     ) {
-			//       errors.email = 'Invalid email address';
-			//     }
-			//     return errors;
-			//   }}
+			validate={values => {
+				const errors = {};
+				if (!values.name) {
+					errors.name = "Required";
+				}
+
+				if (!values.initRelease) {
+					errors.initRelease = "Required";
+				} else if (values.initRelease < 1954) {
+					errors.initRelease =
+						"1954, Fortran as a first programming language, check again your date";
+				}
+
+				return errors;
+			}}
 			onSubmit={(values, { setSubmitting }) => {
 				setTimeout(() => {
 					setSubmitting(false);
@@ -50,12 +52,14 @@ const InputForm = ({ addNote }) => {
 						.post("http://localhost:5000/v1/api/notes", { ...values })
 						.then(data => addNote(data.data.content))
 						.catch(err => console.log(err.message));
-					alert(JSON.stringify(values, null, 2));
-				}, 500);
+					// alert(JSON.stringify(values, null, 2));
+				}, 1000);
 			}}
 		>
 			{({ submitForm, isSubmitting }) => (
-				<Form style={{ width: "100%", justifyContent: "center" }}>
+				<Form
+					style={{ width: "100%", padding: "50px 0", justifyContent: "center" }}
+				>
 					<StyledField
 						component={TextField}
 						name="name"
@@ -75,11 +79,12 @@ const InputForm = ({ addNote }) => {
 						type="description"
 						label="description"
 						name="description"
+						multiline
 					/>
 					<br />
 					<StyledField
 						component={TextField}
-						type="initRelease"
+						type="number"
 						label="initRelease"
 						name="initRelease"
 					/>
